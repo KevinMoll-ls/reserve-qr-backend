@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/neverendingqs/netlify-express#readme",
   "dependencies": {
-    "phantom": "^6.3.0",
     "puppeteer": "^13.1.2"
   },
   "devDependencies": {
