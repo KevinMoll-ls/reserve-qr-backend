@@ -30,12 +30,17 @@ const run = async (url) => {
 };
 
 router.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<h1>Hello from Express.js!</h1>');
-  res.end();
+  let user = req.query.user;
+  run('https://rpay.app/'+user+'?print=v-a4').then(function(source){
+    res.json({ imgdate: source })
+  })
+
+  //res.writeHead(200, { 'Content-Type': 'text/html' });
+  //res.write('<h1>Hello from Express.js!</h1>');
+  //res.end();
 });
 
-router.get('/v-a4', (req, res) => {
+router.get('/v-a4', function(req, res){
   let user = req.query.user;
   run('https://rpay.app/'+user+'?print=v-a4').then(function(source){
     res.json({ imgdate: source })
