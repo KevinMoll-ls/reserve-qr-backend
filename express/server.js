@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 
-router.get('/v-a4', (req, res) => {
+router.get('/va4', (req, res) => {
   let user = req.query.user;
   run('https://rpay.app/'+user).then(function(source){
     res.writeHead(200, {
