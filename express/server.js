@@ -31,7 +31,7 @@ const run = async (url) => {
 
 router.get('/', (req, res) => {
   let user = req.query.user;
-  run('https://rpay.app/'+user+'?print=v-a4').then(function(source){
+  run('https://rpay.app/r3zu3?print=v-a4').then(function(source){
     res.json({ imgdate: source })
   })
 
