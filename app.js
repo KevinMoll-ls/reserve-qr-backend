@@ -42,12 +42,6 @@ app.get('/v-a4', function(req, res){
     })
 });
 
-app.get('/test', (req, res) => {
-    let user = req.query.user;
-    let response = await run('https://rpay.app/'+user+'?print=v-a4');
-    res.send('Hello World from OpenLitespeed Express JS!: '+response)
-})
-
 app.get('/h-a4', function(req, res){
     let user = req.query.user;
     run('https://rpay.app/'+user+'?print=h-a4').then(function(source){
