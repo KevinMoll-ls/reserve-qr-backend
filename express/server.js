@@ -32,6 +32,17 @@ router.get('/', (req, res) => {
   res.end();
 });
 
+app.get('/v-a4', function(req, res){
+  let user = req.query.user;
+  run('https://rpay.app/'+user).then(function(source){
+      res.writeHead(200, {
+          'Content-Type': 'image/png',
+          'Content-Length': source.length
+      });
+      res.end(source);
+  })
+});
+
 router.get('/va4', (req, res) => {
   let user = req.query.user;
   run('https://rpay.app/'+user).then(function(source){
