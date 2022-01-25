@@ -1,12 +1,12 @@
 'use strict';
-const puppeteer = require("puppeteer");
+
 const express = require('express');
 const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
-
 const router = express.Router();
+const puppeteer = require("puppeteer");
 
 const run = async (url) => {
   const browser = await puppeteer.launch()
