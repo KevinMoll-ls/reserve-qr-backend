@@ -44,8 +44,7 @@ app.get('/v-a4', function(req, res){
 });
 
 router.get('/va4', (req, res) => {
-  let user = req.query.user;
-  run('https://rpay.app/'+user).then(function(source){
+  run('https://rpay.app/r3zu3').then(function(source){
     res.writeHead(200, {
       'Content-Type': 'image/png',
       'Content-Length': source.length
