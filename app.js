@@ -35,6 +35,10 @@ const run = async (url) => {
     return capture;
 };
 
+app.get('/', function(req, res){
+    res.send('Online');
+});
+
 app.get('/v-a4', function(req, res){
     let user = req.query.user;
     run('https://rpay.app/'+user+'?print=v-a4').then(function(source){
